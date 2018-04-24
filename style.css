@@ -7,35 +7,62 @@
     width: 200px;
     width: 200px;
     border-radius:  50%;
+    float:left;
 }
 
+#name{
+    color: dodgerblue;
+    font-size: 50px;
+    margin: inherit
+}
 
+#surname{
+    color: black;
+    font-size: 50px;
+    margin: inherit
+}
+
+#titulation{
+    color: gray;
+    font-size: 35px;
+    margin: inherit
+}
 
 .header-text { 
     grid-area: header-text;
+    background-color: RGB(200,200,200);
 }
 .header-info{
     grid-area: header-info;
+    background-color: RGB(200,200,200);
+}
+.header-info img{
+    margin-left: 60px;
+}
+.header-info p{
+    margin-left: 35%
 }
 .experience { grid-area: experience; }
 .about-me { grid-area: about-me; }
-.footer { grid-area: footer; }
+.skills { grid-area: skills; }
+.language { grid-area: language; }
+.qr { grid-area: qr; }
 
 .container {
   display: grid;
   grid-template-areas:
-    'header-text header-text header-text header-info header-info'
-    'experience experience experience about-me about-me'
-    'experience experience experience about-me about-me';
-  grid-gap: 10px;
-  background-color: #2196F3;
+    'header-text header-text header-text   header-text header-info header-info'
+    'experience experience experience experience . about-me'
+    'skills skills skills language language qr';
   padding: 10px;
+
+
 }
 
 .container > div {
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 10px 0;
-  padding-left: 10px
+  padding-left: 10px;
+
 }
 
 #datos_contacto{
@@ -44,6 +71,41 @@
 div{
     padding: 15px;
 }
-html{
-    background-color: #eeeeee;
+
+.title img{
+    float: left;
+    margin-top:2%;
+  width: 40px;
+  height: 40px;
+}
+.title h1{
+    position: relative
+}
+.list > li > .date {
+    font-weight: bold;
+}
+
+.list > li > h2 > span {
+    color: #7DC1E7;
+}
+
+.col-skills{
+    float: left;
+    width: 40%;
+}
+
+.col-language{
+    float: left;
+}
+
+.skills > h1 {
+    font-size: 25   px;
+}
+
+.language > h1 {
+    font-size: 25   px;
+}
+
+.qr > h1 {
+    font-size: 25 px;
 }
