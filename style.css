@@ -6,21 +6,44 @@
 #profile-photo{
     width: 200px;
     width: 200px;
+    border-radius:  50%;
 }
 
-.left{
-    float: left;
-    background-color: bisque;
+
+
+.header-text { 
+    grid-area: header-text;
+}
+.header-info{
+    grid-area: header-info;
+}
+.experience { grid-area: experience; }
+.about-me { grid-area: about-me; }
+.footer { grid-area: footer; }
+
+.container {
+  display: grid;
+  grid-template-areas:
+    'header-text header-text header-text header-info header-info'
+    'experience experience experience about-me about-me'
+    'experience experience experience about-me about-me';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.right{
-    float: right;
-    background-color: aqua;
-}
-.container{
-    text-align: center;
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+  padding-left: 10px
 }
 
-.left, .right{
-    display: inline-block;
+#datos_contacto{
+    padding: 10px;
+}
+div{
+    padding: 15px;
+}
+html{
+    background-color: #eeeeee;
 }
